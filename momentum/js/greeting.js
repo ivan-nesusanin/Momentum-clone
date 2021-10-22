@@ -4,7 +4,7 @@ export function showGreeting() {
   return GREETING.textContent = `Good ${getTimeOfDay()}`;
 }
 
-function getTimeOfDay() {
+export function getTimeOfDay() {
   const date = new Date();
   const hours = date.getHours();
   if (hours >= 6 && hours < 12) {
