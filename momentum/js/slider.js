@@ -9,10 +9,10 @@ function getRandomNum(min, max) {
   randomNum = Math.round(Math.random() * (max - min) + min);
   return randomNum;
 }
+getRandomNum(1, 20);
 
-function setBg() {
+function setBg(bgNum) {
   let timeOfDay = getTimeOfDay();
-  let bgNum = getRandomNum(1, 20);
   if (String(bgNum).length === 1) {
     bgNum = String(bgNum).padStart(2, '0');
   }
@@ -23,28 +23,24 @@ function setBg() {
   };
   return img;
 }
-setBg()
+setBg(randomNum);
 
 slideNext.addEventListener('click', getSlideNext);
 function getSlideNext() {
-  randomNum = getRandomNum(1, 20);
-  if (randomNum <= 20) {
+  if (randomNum < 20) {
     randomNum++;
-    setBg();
   } else {
     randomNum = 1;
-    setBg();
   }
+  setBg(randomNum);
 }
 
 slidePrev.addEventListener('click', getSlidePrev);
 function getSlidePrev() {
-  randomNum = getRandomNum(1, 20);
-  if (randomNum >= 1) {
+  if (randomNum > 1) {
     randomNum--;
-    setBg();
   } else {
     randomNum = 20;
-    setBg();
   }
+  setBg(randomNum);
 }
