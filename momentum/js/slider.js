@@ -5,7 +5,7 @@ const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
 let randomNum;
 
-function getRandomNum(min, max) {
+export function getRandomNum(min, max) {
   randomNum = Math.round(Math.random() * (max - min) + min);
   return randomNum;
 }
