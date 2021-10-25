@@ -29,14 +29,15 @@ const playItem = document.querySelectorAll('.play-item');
 // кнопка play
 PLAY.addEventListener('click', playAudio);
 function playAudio() {
-  audio.src = playList[playNum].src;
+  if (audio.currentTime === 0) {
+    audio.src = playList[playNum].src;
+  }
   playItem[playNum].classList.add('item-active');         //выделение активного трека
   trackName.textContent = playItem[playNum].innerHTML;    //вывод названия трека над прогресс-баром
   duration.textContent = playList[playNum].duration;      //общая продолжительность трека
   if (!isPlay) {
     audio.play();
     isPlay = true;
-    audio.currentTime;
   } else {
     audio.pause();
     isPlay = false;
