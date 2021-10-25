@@ -67,6 +67,7 @@ function nextTrack() {
     playNum = 0;
   }
   isPlay = false;
+  audio.src = playList[playNum].src;
   playAudio();
 }
 
@@ -78,6 +79,7 @@ function prevTrack() {
     playNum--;
   }
   isPlay = false;
+  audio.src = playList[playNum].src;
   playAudio();
 }
 

@@ -1,4 +1,4 @@
-const NAME = document.querySelector('.name');
+export const NAME = document.querySelector('.name');
 
 NAME.placeholder = '[Enter name]';
 
