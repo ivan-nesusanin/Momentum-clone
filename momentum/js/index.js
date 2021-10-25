@@ -6,5 +6,7 @@ import * as weather from './weather.js';
 import * as quotes from './quote.js';
 import * as player from './player.js';
 import * as language from './language.js';
+import * as settings from './settings-menu.js';
+
 
 
