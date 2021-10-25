@@ -31,12 +31,63 @@ body {
   padding: 20px;
 }
 
+.player {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
 .player-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 120px;
-  margin-bottom: 28px;
+  width: 250px;
+  /* margin-bottom: 28px; */
+}
+
+.volume {
+  background-image: url("../assets/svg/volume.svg");
+}
+
+.mute {
+  background-image: url("../assets/svg/mute.svg");
+}
+
+.volume-bar {
+  width: 100px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+  width: 250px;
+}
+
+.track-name {
+  font-size: 14px;
+  opacity: .8;
+}
+
+.progress-bar {
+  width: 100%;
+}
+
+.time-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  opacity: .8;
+}
+
+.current-time {
+  width: 50px;
+}
+
+.duration {
+  width: 50px;
 }
 
 .play-list {

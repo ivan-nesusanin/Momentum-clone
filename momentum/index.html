@@ -15,6 +15,16 @@
         <button class="play-prev player-icon"></button>
         <button class="play player-icon"></button>
         <button class="play-next player-icon"></button>
+        <input class="volume-bar" type="range" name="volume" value="0.5" min="0" max="1" step="0.05">
+        <button class="volume player-icon"></button>
+      </div>
+      <div class="progress-container">
+        <span class="track-name">[Track Name]</span>
+        <input class="progress-bar" type="range" name="progress" value="0" min="0" max="100" step="1">
+        <div class="time-container">
+          <span class="current-time">00:00</span>
+          <span class="duration">00:00</span>
+        </div>
       </div>
       <ul class="play-list"></ul>
     </div>
